@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Overview of mobile-first puzzle games: Number Sums, Sudoku, Kakuro, and Hitori."
+    />
+    <title>Simple Puzzle Games</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Simple Puzzle Games</h1>
+      <p class="tagline">
+        Mobile-first browser puzzles built with TypeScript. Each game installs as a PWA and saves
+        progress locally.
+      </p>
+    </header>
+
+    <main class="game-list">
+      <article class="game-card" id="numbersums">
+        <header class="game-card-header">
+          <h2>Number Sums</h2>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-numbersums/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-numbersums"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </header>
+        <p class="game-tag">Rectangular grids · colored regions · four difficulties</p>
+        <section>
+          <h3>Concept</h3>
+          <p>
+            A logic puzzle where numbers sit in a grid divided into colored
+            <strong>regions</strong>. You decide which numbers count toward the puzzle by circling
+            them (or crossing out numbers you exclude). Every <strong>row</strong>,
+            <strong>column</strong>, and <strong>region</strong> has a target sum shown on the
+            edge of the grid.
+          </p>
+        </section>
+        <section>
+          <h3>How to play</h3>
+          <ol>
+            <li>Read the target totals for each row (left), column (top), and region (badge).</li>
+            <li>
+              Tap cells in <strong>Circle</strong> mode to include a number, or
+              <strong>Erase</strong> mode to exclude it.
+            </li>
+            <li>
+              A target turns green when your circled numbers in that line add up correctly — check
+              every line before you finish.
+            </li>
+            <li>
+              Win when every cell is marked and all row, column, and region sums match their
+              targets.
+            </li>
+          </ol>
+        </section>
+      </article>
+
+      <article class="game-card" id="sudoku">
+        <header class="game-card-header">
+          <h2>Sudoku</h2>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-sudoku/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-sudoku"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </header>
+        <p class="game-tag">9×9 grid · pencil notes · 40,000 puzzles</p>
+        <section>
+          <h3>Concept</h3>
+          <p>
+            The classic number-placement puzzle: fill a 9×9 grid so every row, column, and 3×3 box
+            contains the digits 1–9 exactly once. Some cells are given as clues; you deduce the rest.
+          </p>
+        </section>
+        <section>
+          <h3>How to play</h3>
+          <ol>
+            <li>Choose a difficulty (Easy through Expert) and start a new puzzle.</li>
+            <li>Select an empty cell, then tap a digit on the number pad to enter it.</li>
+            <li>
+              Use <strong>Notes</strong> mode for pencil marks when multiple candidates are possible;
+              <strong>Fill Notes</strong> can auto-fill candidates on empty cells.
+            </li>
+            <li>
+              Avoid contradictions — the app tracks mistakes against the hidden solution. Undo,
+              reset, and resume are available anytime.
+            </li>
+          </ol>
+        </section>
+      </article>
+
+      <article class="game-card" id="kakuro">
+        <header class="game-card-header">
+          <h2>Kakuro</h2>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-kakuro/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-kakuro"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </header>
+        <p class="game-tag">Crossword-style runs · combination clues · three difficulties</p>
+        <section>
+          <h3>Concept</h3>
+          <p>
+            Often described as a crossword with numbers: fill white cells with digits 1–9 so each
+            horizontal or vertical <strong>run</strong> adds up to its clue. No digit repeats within
+            a single run. Black clue cells show the target sum for the run below or to the right.
+          </p>
+        </section>
+        <section>
+          <h3>How to play</h3>
+          <ol>
+            <li>
+              Tap a light (fillable) cell, then choose a digit. The top-left number on a clue cell is
+              the down sum; the bottom-right is the right sum.
+            </li>
+            <li>
+              Use pencil <strong>Notes</strong> for candidates; impossible notes are pruned as you
+              place digits.
+            </li>
+            <li>
+              Open the <strong>Cheatsheet</strong> to see which digit combinations are valid for a
+              given run length and sum.
+            </li>
+            <li>Complete every run without repeats to solve the puzzle.</li>
+          </ol>
+        </section>
+      </article>
+
+      <article class="game-card" id="hitori">
+        <header class="game-card-header">
+          <h2>Hitori</h2>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-hitori/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-hitori"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </header>
+        <p class="game-tag">Shade duplicates · connectivity · grid size sets difficulty</p>
+        <section>
+          <h3>Concept</h3>
+          <p>
+            A Nikoli-style elimination puzzle: the grid already shows numbers. You shade some cells
+            black so that shaded cells are “removed” from their row and column, while obeying three
+            global rules at once.
+          </p>
+        </section>
+        <section>
+          <h3>How to play</h3>
+          <ol>
+            <li>
+              <strong>No duplicates</strong> — in each row and column, every number appears at most
+              once among unshaded cells.
+            </li>
+            <li>
+              <strong>No touching shades</strong> — shaded cells cannot share an edge (diagonal is
+              fine).
+            </li>
+            <li>
+              <strong>Stay connected</strong> — all unshaded cells must form one group via orthogonal
+              moves.
+            </li>
+            <li>
+              Tap a cell to cycle: undecided → white ring (keep) → black (shade) → undecided. Grid
+              size sets difficulty (5×5 Easy up to 12×12 Expert).
+            </li>
+          </ol>
+        </section>
+      </article>
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        All games are MIT licensed, optimized for phones and iPad, and support
+        <strong>Add to Home Screen</strong> for a full-screen PWA experience.
+      </p>
+    </footer>
+  </body>
+</html>
