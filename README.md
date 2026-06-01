@@ -12,6 +12,7 @@ A landing page that lists the **Simple** puzzle game collection with play links,
 | Sudoku | [Play](https://kimmania.github.io/simple-sudoku/) | [simple-sudoku](https://github.com/kimmania/simple-sudoku) |
 | Kakuro | [Play](https://kimmania.github.io/simple-kakuro/) | [simple-kakuro](https://github.com/kimmania/simple-kakuro) |
 | Hitori | [Play](https://kimmania.github.io/simple-hitori/) | [simple-hitori](https://github.com/kimmania/simple-hitori) |
+| Cryptogram | [Play](https://kimmania.github.io/simple-cryptogram/) | [simple-cryptogram](https://github.com/kimmania/simple-cryptogram) |
 
 ## Local preview
 

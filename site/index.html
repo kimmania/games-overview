@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Overview of mobile-first puzzle games: Number Sums, Sudoku, Kakuro, and Hitori."
+      content="Overview of mobile-first puzzle games: Number Sums, Sudoku, Kakuro, Hitori, and Cryptogram."
     />
     <title>Simple Puzzle Games</title>
     <link rel="stylesheet" href="styles/main.css" />
@@ -204,6 +204,57 @@
             <li>
               Tap a cell to cycle: undecided → white ring (keep) → black (shade) → undecided. Grid
               size sets difficulty (5×5 Easy up to 12×12 Expert).
+            </li>
+          </ol>
+        </section>
+      </article>
+
+      <article class="game-card" id="cryptogram">
+        <header class="game-card-header">
+          <h2>Cryptogram</h2>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-cryptogram/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-cryptogram"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </header>
+        <p class="game-tag">Substitution cipher · famous quotes · three lives</p>
+        <section>
+          <h3>Concept</h3>
+          <p>
+            A classic cryptogram: each puzzle is a famous quote where every letter A–Z has been
+            replaced by a different letter. Punctuation and spaces stay as they are. Decode the
+            substitution to reveal the original quote.
+          </p>
+        </section>
+        <section>
+          <h3>How to play</h3>
+          <ol>
+            <li>
+              Each cipher letter shares a <strong>number</strong> — tap any box with that number
+              (all matching boxes highlight).
+            </li>
+            <li>
+              Tap a keyboard letter to assign your guess to that number. Each plaintext letter can
+              only be used once.
+            </li>
+            <li>
+              Some guesses are <strong>givens</strong> at the start (shown in white) and cannot be
+              changed. Difficulty controls how many starters you get — Expert reveals only one.
+            </li>
+            <li>
+              You have <strong>three mistakes</strong>; a wrong guess counts once per number. Solve
+              every number correctly to win, or use <strong>Reset</strong> to try the same quote
+              again.
             </li>
           </ol>
         </section>
