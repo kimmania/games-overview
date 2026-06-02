@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Overview of mobile-first puzzle games: Number Sums, Sudoku, Kakuro, Hitori, and Cryptogram."
+      content="Overview of mobile-first puzzle and solitaire games: Number Sums, Sudoku, Kakuro, Hitori, Cryptogram, and Solitaire."
     />
     <title>Simple Puzzle Games</title>
     <link rel="stylesheet" href="styles/main.css" />
@@ -14,8 +14,8 @@
     <header class="page-header">
       <h1>Simple Puzzle Games</h1>
       <p class="tagline">
-        Mobile-first browser puzzles built with TypeScript. Each game installs as a PWA and saves
-        progress locally.
+        Mobile-first browser puzzles and card games built with TypeScript. Each app installs as a
+        PWA and saves progress locally.
       </p>
     </header>
 
@@ -259,11 +259,113 @@
           </ol>
         </section>
       </article>
+
+      <article class="game-card" id="solitaire">
+        <header class="game-card-header">
+          <h2>Solitaire</h2>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/game-solitaire/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/game-solitaire"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </header>
+        <p class="game-tag">One PWA · 17 rule sets · switch games from the header menu</p>
+        <section>
+          <h3>Concept</h3>
+          <p>
+            A single installable card-game app with many classic solitaire variants. Tap
+            <strong>Games</strong> in the header to switch rule sets; each game keeps its own saved
+            layout in local storage. Touch-friendly drag-and-drop, undo, and automatic win detection
+            are shared across variants.
+          </p>
+        </section>
+        <section>
+          <h3>Games included</h3>
+          <ul class="variant-list">
+            <li>
+              <strong>Baker's Dozen</strong> — Thirteen columns; kings start at the bottom; build
+              down in suit one card at a time.
+            </li>
+            <li>
+              <strong>Beleaguered Castle</strong> — Aces start on foundations, kings in reserve;
+              build tableau down in suit into eight columns.
+            </li>
+            <li>
+              <strong>Canfield</strong> — Reserve pile, cyclic foundations from a starter rank;
+              tableau builds down alternating color.
+            </li>
+            <li>
+              <strong>Clock</strong> — Turn cards onto their hour pile; win before the fourth king
+              reaches the center.
+            </li>
+            <li>
+              <strong>Easthaven</strong> — Seven columns, build down in suit; one card at a time from
+              the stock.
+            </li>
+            <li>
+              <strong>Eight Off</strong> — Eight cells and columns; build tableau down in suit,
+              foundations up.
+            </li>
+            <li>
+              <strong>Forty Thieves</strong> — Two decks; build tableau down in suit; fill eight
+              foundations Ace to King.
+            </li>
+            <li>
+              <strong>FreeCell</strong> — Use four free cells to build foundations Ace to King.
+            </li>
+            <li>
+              <strong>Klondike</strong> — Classic solitaire; build foundations Ace to King (draw-1,
+              unlimited stock recycle).
+            </li>
+            <li>
+              <strong>Monte Carlo</strong> — Remove pairs of matching rank that touch; redeal when
+              stuck.
+            </li>
+            <li>
+              <strong>Pyramid</strong> — Pair exposed cards that sum to 13; clear the pyramid and
+              stock.
+            </li>
+            <li>
+              <strong>Scorpion</strong> — Build down in suit on seven columns; clear four King-to-Ace
+              runs.
+            </li>
+            <li>
+              <strong>Spider (1 suit)</strong> — Easiest; build descending stacks; suit does not
+              matter.
+            </li>
+            <li>
+              <strong>Spider (2 suits)</strong> — Medium; build down in one suit using spades and
+              hearts only.
+            </li>
+            <li>
+              <strong>Spider (4 suits)</strong> — Hardest; build down in matching suit with all four
+              suits.
+            </li>
+            <li>
+              <strong>TriPeaks</strong> — Clear three peaks; play exposed cards one rank above or
+              below the waste.
+            </li>
+            <li>
+              <strong>Yukon</strong> — All cards face up; move any face-up stack; build alternating
+              colors.
+            </li>
+          </ul>
+        </section>
+      </article>
     </main>
 
     <footer class="page-footer">
       <p>
-        All games are MIT licensed, optimized for phones and iPad, and support
+        All apps are MIT licensed, optimized for phones and iPad, and support
         <strong>Add to Home Screen</strong> for a full-screen PWA experience.
       </p>
     </footer>

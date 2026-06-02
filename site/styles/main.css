@@ -167,6 +167,25 @@ body {
   margin-top: 6px;
 }
 
+.variant-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.variant-list li {
+  margin-top: 0;
+}
+
+.variant-list li + li {
+  margin-top: 10px;
+}
+
+.variant-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .page-footer {
   margin-top: 32px;
   padding-top: 20px;

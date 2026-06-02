@@ -1,6 +1,6 @@
 # Games Overview
 
-A landing page that lists the **Simple** puzzle game collection with play links, source repos, and a short overview of each game’s rules.
+A landing page that lists the **Simple** puzzle game collection and the **Solitaire** card-game PWA with play links, source repos, and a short overview of each game’s rules.
 
 **Live site:** [https://kimmania.github.io/games-overview/](https://kimmania.github.io/games-overview/) (after GitHub Pages is enabled)
 
@@ -13,6 +13,9 @@ A landing page that lists the **Simple** puzzle game collection with play links,
 | Kakuro | [Play](https://kimmania.github.io/simple-kakuro/) | [simple-kakuro](https://github.com/kimmania/simple-kakuro) |
 | Hitori | [Play](https://kimmania.github.io/simple-hitori/) | [simple-hitori](https://github.com/kimmania/simple-hitori) |
 | Cryptogram | [Play](https://kimmania.github.io/simple-cryptogram/) | [simple-cryptogram](https://github.com/kimmania/simple-cryptogram) |
+| Solitaire (17 games) | [Play](https://kimmania.github.io/game-solitaire/) | [game-solitaire](https://github.com/kimmania/game-solitaire) |
+
+The Solitaire app includes Klondike, FreeCell, Spider (1/2/4 suits), Yukon, Easthaven, Pyramid, TriPeaks, Forty Thieves, Eight Off, Canfield, Scorpion, Monte Carlo, Clock, Baker's Dozen, and Beleaguered Castle. Use **Games** in the app header to switch variants.
 
 ## Local preview
 
