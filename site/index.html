@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Overview of mobile-first puzzle and solitaire games: Number Sums, Sudoku, Kakuro, Hitori, Cryptogram, and Solitaire."
+      content="Overview of mobile-first puzzle and solitaire games. Each app installs as a PWA and saves progress locally."
     />
     <title>Simple Puzzle Games</title>
     <link rel="stylesheet" href="styles/main.css" />
@@ -20,198 +20,66 @@
     </header>
 
     <main class="game-list">
-      <article class="game-card" id="numbersums">
-        <header class="game-card-header">
-          <h2>Number Sums</h2>
+      <!-- Logic Puzzles -->
+      <h2 class="category-heading">Logic Puzzles</h2>
+
+      <article class="game-card" id="cagelogic" data-added="2026-06-27">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/game-cage-logic.png"
+            alt="Cage Logic icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Cage Logic</h2>
+              <span class="badge-new" aria-label="Recently added">New</span>
+            </div>
+            <p class="game-tag">KenKen-style · cage arithmetic · multiple sizes</p>
+          </div>
           <div class="game-actions">
             <a
               class="btn btn-primary"
-              href="https://kimmania.github.io/simple-numbersums/"
+              href="https://kimmania.github.io/game-cage-logic/"
               rel="noopener noreferrer"
               >Play</a
             >
             <a
               class="btn btn-secondary"
-              href="https://github.com/kimmania/simple-numbersums"
+              href="https://github.com/kimmania/game-cage-logic"
               rel="noopener noreferrer"
               >Source</a
             >
           </div>
-        </header>
-        <p class="game-tag">Rectangular grids · colored regions · four difficulties</p>
-        <section>
-          <h3>Concept</h3>
-          <p>
-            A logic puzzle where numbers sit in a grid divided into colored
-            <strong>regions</strong>. You decide which numbers count toward the puzzle by circling
-            them (or crossing out numbers you exclude). Every <strong>row</strong>,
-            <strong>column</strong>, and <strong>region</strong> has a target sum shown on the
-            edge of the grid.
-          </p>
-        </section>
-        <section>
-          <h3>How to play</h3>
-          <ol>
-            <li>Read the target totals for each row (left), column (top), and region (badge).</li>
-            <li>
-              Tap cells in <strong>Circle</strong> mode to include a number, or
-              <strong>Erase</strong> mode to exclude it.
-            </li>
-            <li>
-              A target turns green when your circled numbers in that line add up correctly — check
-              every line before you finish.
-            </li>
-            <li>
-              Win when every cell is marked and all row, column, and region sums match their
-              targets.
-            </li>
-          </ol>
-        </section>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              A KenKen-style logic puzzle: fill the grid so every row and column contains each digit
+              once, and every cage computes to its target using the given arithmetic operation.
+            </p>
+          </section>
+        </div>
       </article>
 
-      <article class="game-card" id="sudoku">
-        <header class="game-card-header">
-          <h2>Sudoku</h2>
-          <div class="game-actions">
-            <a
-              class="btn btn-primary"
-              href="https://kimmania.github.io/simple-sudoku/"
-              rel="noopener noreferrer"
-              >Play</a
-            >
-            <a
-              class="btn btn-secondary"
-              href="https://github.com/kimmania/simple-sudoku"
-              rel="noopener noreferrer"
-              >Source</a
-            >
+      <article class="game-card" id="cryptogram" data-added="2026-06-01">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/simple-cryptogram.png"
+            alt="Cryptogram icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Cryptogram</h2>
+            </div>
+            <p class="game-tag">Substitution cipher · famous quotes · three lives</p>
           </div>
-        </header>
-        <p class="game-tag">9×9 grid · pencil notes · 40,000 puzzles</p>
-        <section>
-          <h3>Concept</h3>
-          <p>
-            The classic number-placement puzzle: fill a 9×9 grid so every row, column, and 3×3 box
-            contains the digits 1–9 exactly once. Some cells are given as clues; you deduce the rest.
-          </p>
-        </section>
-        <section>
-          <h3>How to play</h3>
-          <ol>
-            <li>Choose a difficulty (Easy through Expert) and start a new puzzle.</li>
-            <li>Select an empty cell, then tap a digit on the number pad to enter it.</li>
-            <li>
-              Use <strong>Notes</strong> mode for pencil marks when multiple candidates are possible;
-              <strong>Fill Notes</strong> can auto-fill candidates on empty cells.
-            </li>
-            <li>
-              Avoid contradictions — the app tracks mistakes against the hidden solution. Undo,
-              reset, and resume are available anytime.
-            </li>
-          </ol>
-        </section>
-      </article>
-
-      <article class="game-card" id="kakuro">
-        <header class="game-card-header">
-          <h2>Kakuro</h2>
-          <div class="game-actions">
-            <a
-              class="btn btn-primary"
-              href="https://kimmania.github.io/simple-kakuro/"
-              rel="noopener noreferrer"
-              >Play</a
-            >
-            <a
-              class="btn btn-secondary"
-              href="https://github.com/kimmania/simple-kakuro"
-              rel="noopener noreferrer"
-              >Source</a
-            >
-          </div>
-        </header>
-        <p class="game-tag">Crossword-style runs · combination clues · three difficulties</p>
-        <section>
-          <h3>Concept</h3>
-          <p>
-            Often described as a crossword with numbers: fill white cells with digits 1–9 so each
-            horizontal or vertical <strong>run</strong> adds up to its clue. No digit repeats within
-            a single run. Black clue cells show the target sum for the run below or to the right.
-          </p>
-        </section>
-        <section>
-          <h3>How to play</h3>
-          <ol>
-            <li>
-              Tap a light (fillable) cell, then choose a digit. The top-left number on a clue cell is
-              the down sum; the bottom-right is the right sum.
-            </li>
-            <li>
-              Use pencil <strong>Notes</strong> for candidates; impossible notes are pruned as you
-              place digits.
-            </li>
-            <li>
-              Open the <strong>Cheatsheet</strong> to see which digit combinations are valid for a
-              given run length and sum.
-            </li>
-            <li>Complete every run without repeats to solve the puzzle.</li>
-          </ol>
-        </section>
-      </article>
-
-      <article class="game-card" id="hitori">
-        <header class="game-card-header">
-          <h2>Hitori</h2>
-          <div class="game-actions">
-            <a
-              class="btn btn-primary"
-              href="https://kimmania.github.io/simple-hitori/"
-              rel="noopener noreferrer"
-              >Play</a
-            >
-            <a
-              class="btn btn-secondary"
-              href="https://github.com/kimmania/simple-hitori"
-              rel="noopener noreferrer"
-              >Source</a
-            >
-          </div>
-        </header>
-        <p class="game-tag">Shade duplicates · connectivity · grid size sets difficulty</p>
-        <section>
-          <h3>Concept</h3>
-          <p>
-            A Nikoli-style elimination puzzle: the grid already shows numbers. You shade some cells
-            black so that shaded cells are “removed” from their row and column, while obeying three
-            global rules at once.
-          </p>
-        </section>
-        <section>
-          <h3>How to play</h3>
-          <ol>
-            <li>
-              <strong>No duplicates</strong> — in each row and column, every number appears at most
-              once among unshaded cells.
-            </li>
-            <li>
-              <strong>No touching shades</strong> — shaded cells cannot share an edge (diagonal is
-              fine).
-            </li>
-            <li>
-              <strong>Stay connected</strong> — all unshaded cells must form one group via orthogonal
-              moves.
-            </li>
-            <li>
-              Tap a cell to cycle: undecided → white ring (keep) → black (shade) → undecided. Grid
-              size sets difficulty (5×5 Easy up to 12×12 Expert).
-            </li>
-          </ol>
-        </section>
-      </article>
-
-      <article class="game-card" id="cryptogram">
-        <header class="game-card-header">
-          <h2>Cryptogram</h2>
           <div class="game-actions">
             <a
               class="btn btn-primary"
@@ -226,43 +94,290 @@
               >Source</a
             >
           </div>
-        </header>
-        <p class="game-tag">Substitution cipher · famous quotes · three lives</p>
-        <section>
-          <h3>Concept</h3>
-          <p>
-            A classic cryptogram: each puzzle is a famous quote where every letter A–Z has been
-            replaced by a different letter. Punctuation and spaces stay as they are. Decode the
-            substitution to reveal the original quote.
-          </p>
-        </section>
-        <section>
-          <h3>How to play</h3>
-          <ol>
-            <li>
-              Each cipher letter shares a <strong>number</strong> — tap any box with that number
-              (all matching boxes highlight).
-            </li>
-            <li>
-              Tap a keyboard letter to assign your guess to that number. Each plaintext letter can
-              only be used once.
-            </li>
-            <li>
-              Some guesses are <strong>givens</strong> at the start (shown in white) and cannot be
-              changed. Difficulty controls how many starters you get — Expert reveals only one.
-            </li>
-            <li>
-              You have <strong>three mistakes</strong>; a wrong guess counts once per number. Solve
-              every number correctly to win, or use <strong>Reset</strong> to try the same quote
-              again.
-            </li>
-          </ol>
-        </section>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              A classic cryptogram: each puzzle is a famous quote where every letter A–Z has been
+              replaced by a different letter. Punctuation and spaces stay as they are. Decode the
+              substitution to reveal the original quote.
+            </p>
+          </section>
+        </div>
       </article>
 
-      <article class="game-card" id="solitaire">
-        <header class="game-card-header">
-          <h2>Solitaire</h2>
+      <article class="game-card" id="hitori" data-added="2026-06-01">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/simple-hitori.png"
+            alt="Hitori icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Hitori</h2>
+            </div>
+            <p class="game-tag">Shade duplicates · connectivity · grid size sets difficulty</p>
+          </div>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-hitori/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-hitori"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              A Nikoli-style elimination puzzle: the grid already shows numbers. You shade some cells
+              black so that shaded cells are “removed” from their row and column, while obeying three
+              global rules at once.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <article class="game-card" id="kakuro" data-added="2026-06-01">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/simple-kakuro.png"
+            alt="Kakuro icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Kakuro</h2>
+            </div>
+            <p class="game-tag">Crossword-style runs · combination clues · three difficulties</p>
+          </div>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-kakuro/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-kakuro"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              Often described as a crossword with numbers: fill white cells with digits 1–9 so each
+              horizontal or vertical <strong>run</strong> adds up to its clue. No digit repeats within
+              a single run.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <article class="game-card" id="numbersums" data-added="2026-06-01">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/simple-numbersums.png"
+            alt="Number Sums icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Number Sums</h2>
+            </div>
+            <p class="game-tag">Rectangular grids · colored regions · four difficulties</p>
+          </div>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-numbersums/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-numbersums"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              A logic puzzle where numbers sit in a grid divided into colored
+              <strong>regions</strong>. You decide which numbers count toward the puzzle by circling
+              them (or crossing out numbers you exclude). Every <strong>row</strong>,
+              <strong>column</strong>, and <strong>region</strong> has a target sum shown on the
+              edge of the grid.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <article class="game-card" id="sightline" data-added="2026-06-27">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/game-sightline.png"
+            alt="Sightline icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Sightline</h2>
+              <span class="badge-new" aria-label="Recently added">New</span>
+            </div>
+            <p class="game-tag">Kurodoko · visibility counts · block shading</p>
+          </div>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/game-sightline/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/game-sightline"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              A Kurodoko shading puzzle: shade cells so every number “sees” exactly as many cells as its
+              count in all four directions, while shaded cells block the line of sight and cannot
+              touch orthogonally.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <article class="game-card" id="starmap" data-added="2026-06-27">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/game-starmap.png"
+            alt="Star Map icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Star Map</h2>
+              <span class="badge-new" aria-label="Recently added">New</span>
+            </div>
+            <p class="game-tag">Star Battle · region partitioning · three difficulties</p>
+          </div>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/game-starmap/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/game-starmap"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              A spatial logic puzzle: place exactly two stars in every row, column, and region without
+              them touching. Auto-Assist tracks deductions and flags impossible placements as you play.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <article class="game-card" id="sudoku" data-added="2026-06-01">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/simple-sudoku.png"
+            alt="Sudoku icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Sudoku</h2>
+            </div>
+            <p class="game-tag">9×9 grid · pencil notes · 40,000 puzzles</p>
+          </div>
+          <div class="game-actions">
+            <a
+              class="btn btn-primary"
+              href="https://kimmania.github.io/simple-sudoku/"
+              rel="noopener noreferrer"
+              >Play</a
+            >
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/kimmania/simple-sudoku"
+              rel="noopener noreferrer"
+              >Source</a
+            >
+          </div>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              The classic number-placement puzzle: fill a 9×9 grid so every row, column, and 3×3 box
+              contains the digits 1–9 exactly once. Some cells are given as clues; you deduce the rest.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <!-- Card Games -->
+      <h2 class="category-heading">Card Games</h2>
+      <article class="game-card" id="solitaire" data-added="2026-06-01">
+        <div class="game-card-top">
+          <img
+            class="game-icon"
+            src="icons/game-solitaire.png"
+            alt="Solitaire icon"
+            width="64"
+            height="64"
+          />
+          <div class="game-card-header">
+            <div class="game-title-row">
+              <h2>Solitaire</h2>
+            </div>
+            <p class="game-tag">One PWA · 17 rule sets · switch games from the header menu</p>
+          </div>
           <div class="game-actions">
             <a
               class="btn btn-primary"
@@ -277,89 +392,101 @@
               >Source</a
             >
           </div>
-        </header>
-        <p class="game-tag">One PWA · 17 rule sets · switch games from the header menu</p>
-        <section>
-          <h3>Concept</h3>
-          <p>
-            A single installable card-game app with many classic solitaire variants. Tap
-            <strong>Games</strong> in the header to switch rule sets; each game keeps its own saved
-            layout in local storage. Touch-friendly drag-and-drop, undo, and automatic win detection
-            are shared across variants.
-          </p>
-        </section>
-        <section>
-          <h3>Games included</h3>
-          <ul class="variant-list">
-            <li>
-              <strong>Baker's Dozen</strong> — Thirteen columns; kings start at the bottom; build
-              down in suit one card at a time.
-            </li>
-            <li>
-              <strong>Beleaguered Castle</strong> — Aces start on foundations, kings in reserve;
-              build tableau down in suit into eight columns.
-            </li>
-            <li>
-              <strong>Canfield</strong> — Reserve pile, cyclic foundations from a starter rank;
-              tableau builds down alternating color.
-            </li>
-            <li>
-              <strong>Clock</strong> — Turn cards onto their hour pile; win before the fourth king
-              reaches the center.
-            </li>
-            <li>
-              <strong>Easthaven</strong> — Seven columns, build down in suit; one card at a time from
-              the stock.
-            </li>
-            <li>
-              <strong>Eight Off</strong> — Eight cells and columns; build tableau down in suit,
-              foundations up.
-            </li>
-            <li>
-              <strong>Forty Thieves</strong> — Two decks; build tableau down in suit; fill eight
-              foundations Ace to King.
-            </li>
-            <li>
-              <strong>FreeCell</strong> — Use four free cells to build foundations Ace to King.
-            </li>
-            <li>
-              <strong>Klondike</strong> — Classic solitaire; build foundations Ace to King (draw-1,
-              unlimited stock recycle).
-            </li>
-            <li>
-              <strong>Monte Carlo</strong> — Remove pairs of matching rank that touch; redeal when
-              stuck.
-            </li>
-            <li>
-              <strong>Pyramid</strong> — Pair exposed cards that sum to 13; clear the pyramid and
-              stock.
-            </li>
-            <li>
-              <strong>Scorpion</strong> — Build down in suit on seven columns; clear four King-to-Ace
-              runs.
-            </li>
-            <li>
-              <strong>Spider (1 suit)</strong> — Easiest; build descending stacks; suit does not
-              matter.
-            </li>
-            <li>
-              <strong>Spider (2 suits)</strong> — Medium; build down in one suit using spades and
-              hearts only.
-            </li>
-            <li>
-              <strong>Spider (4 suits)</strong> — Hardest; build down in matching suit with all four
-              suits.
-            </li>
-            <li>
-              <strong>TriPeaks</strong> — Clear three peaks; play exposed cards one rank above or
-              below the waste.
-            </li>
-            <li>
-              <strong>Yukon</strong> — All cards face up; move any face-up stack; build alternating
-              colors.
-            </li>
-          </ul>
-        </section>
+        </div>
+        <div class="game-card-body">
+          <section>
+            <h3>Concept</h3>
+            <p>
+              A single installable card-game app with many classic solitaire variants. Tap
+              <strong>Games</strong> in the header to switch rule sets; each game keeps its own saved
+              layout in local storage. Touch-friendly drag-and-drop, undo, and automatic win detection
+              are shared across variants.
+            </p>
+          </section>
+          <section>
+            <h3>Games included</h3>
+            <div class="variant-list-container" id="solitaire-variants">
+              <ul class="variant-list">
+                <li>
+                  <strong>Baker's Dozen</strong> — Thirteen columns; kings start at the bottom; build
+                  down in suit one card at a time.
+                </li>
+                <li>
+                  <strong>Beleaguered Castle</strong> — Aces start on foundations, kings in reserve;
+                  build tableau down in suit into eight columns.
+                </li>
+                <li>
+                  <strong>Canfield</strong> — Reserve pile, cyclic foundations from a starter rank;
+                  tableau builds down alternating color.
+                </li>
+                <li>
+                  <strong>Clock</strong> — Turn cards onto their hour pile; win before the fourth king
+                  reaches the center.
+                </li>
+                <li>
+                  <strong>Easthaven</strong> — Seven columns, build down in suit; one card at a time from
+                  the stock.
+                </li>
+                <li>
+                  <strong>Eight Off</strong> — Eight cells and columns; build tableau down in suit,
+                  foundations up.
+                </li>
+                <li>
+                  <strong>Forty Thieves</strong> — Two decks; build tableau down in suit; fill eight
+                  foundations Ace to King.
+                </li>
+                <li>
+                  <strong>FreeCell</strong> — Use four free cells to build foundations Ace to King.
+                </li>
+                <li>
+                  <strong>Klondike</strong> — Classic solitaire; build foundations Ace to King (draw-1,
+                  unlimited stock recycle).
+                </li>
+                <li>
+                  <strong>Monte Carlo</strong> — Remove pairs of matching rank that touch; redeal when
+                  stuck.
+                </li>
+                <li>
+                  <strong>Pyramid</strong> — Pair exposed cards that sum to 13; clear the pyramid and
+                  stock.
+                </li>
+                <li>
+                  <strong>Scorpion</strong> — Build down in suit on seven columns; clear four King-to-Ace
+                  runs.
+                </li>
+                <li>
+                  <strong>Spider (1 suit)</strong> — Easiest; build descending stacks; suit does not
+                  matter.
+                </li>
+                <li>
+                  <strong>Spider (2 suits)</strong> — Medium; build down in one suit using spades and
+                  hearts only.
+                </li>
+                <li>
+                  <strong>Spider (4 suits)</strong> — Hardest; build down in matching suit with all four
+                  suits.
+                </li>
+                <li>
+                  <strong>TriPeaks</strong> — Clear three peaks; play exposed cards one rank above or
+                  below the waste.
+                </li>
+                <li>
+                  <strong>Yukon</strong> — All cards face up; move any face-up stack; build alternating
+                  colors.
+                </li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              class="btn-toggle"
+              aria-expanded="false"
+              aria-controls="solitaire-variants"
+            >
+              <span class="toggle-text">Show all 17 variants</span>
+              <span class="toggle-arrow" aria-hidden="true">▸</span>
+            </button>
+          </section>
+        </div>
       </article>
     </main>
 
@@ -369,5 +496,47 @@
         <strong>Add to Home Screen</strong> for a full-screen PWA experience.
       </p>
     </footer>
+
+    <script>
+      // New badge: show for games added within the last 30 days
+      (function () {
+        const DAYS_NEW = 30;
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        document.querySelectorAll('.game-card[data-added]').forEach(function (card) {
+          const addedStr = card.getAttribute('data-added');
+          if (!addedStr) return;
+
+          const addedDate = new Date(addedStr);
+          addedDate.setHours(0, 0, 0, 0);
+
+          const diffDays = (today - addedDate) / (1000 * 60 * 60 * 24);
+          if (diffDays > DAYS_NEW) {
+            const badge = card.querySelector('.badge-new');
+            if (badge) badge.remove();
+          }
+        });
+      })();
+
+      // Solitaire toggle
+      (function () {
+        const container = document.getElementById('solitaire-variants');
+        const btn = document.querySelector('.btn-toggle');
+        if (!container || !btn) return;
+
+        // Start collapsed
+        container.classList.add('collapsed');
+
+        btn.addEventListener('click', function () {
+          const isCollapsed = container.classList.toggle('collapsed');
+          btn.setAttribute('aria-expanded', String(!isCollapsed));
+          btn.querySelector('.toggle-text').textContent = isCollapsed
+            ? 'Show all 17 variants'
+            : 'Hide variants';
+          btn.querySelector('.toggle-arrow').textContent = isCollapsed ? '▸' : '▾';
+        });
+      })();
+    </script>
   </body>
 </html>
